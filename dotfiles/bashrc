@@ -4,6 +4,19 @@ _isxrunning=false
 _isroot=false
 [[ $UID -eq 0 ]] && _isroot=true
 
+_islinux=false
+[[ "$(uname -s)" =~ Linux|GNU|GNU/* ]] && _islinux=true
+
+if $_islinux; then
+	if [[ -f $HOME/dotfiles/bash/bashrc_linux.sh ]];then
+		.  $HOME/dotfiles/bash/bashrc_linux.sh
+	fi
+else
+	if [[ -f  $HOME/dotfiles/bash/bashrc_windows.sh ]]; then
+		.  $HOME/dotfiles/bash/bashrc_windows.sh
+	fi
+fi
+
 if [[ -f $HOME/dotfiles/bash/git.sh ]]; then
 	. $HOME/dotfiles/bash/git.sh
 fi
