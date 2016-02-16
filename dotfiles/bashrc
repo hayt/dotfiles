@@ -1,0 +1,9 @@
+_isxrunning=false
+[[ -n "$DISPLAY" ]] && _isxrunning=true
+
+_isroot=false
+[[ $UID -eq 0 ]] && _isroot=true
+
+if [[ -f $HOME/dotfiles/bash/git.sh ]]; then
+	. $HOME/dotfiles/bash/git.sh
+fi
