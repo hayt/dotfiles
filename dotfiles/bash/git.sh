@@ -5,6 +5,6 @@ if $_isxrunning; then
     }
 
    export GIT_PS1_SHOWCOLORHINTS=true
-   export PS1="$GY[$Y\u$GY@$P\h$GY:$B\W\$(__git_ps1 \"$GY|$LB%s\")$GY]$W\$(get_prompt_symbol) "
+   export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1) \$ '
 fi
 fi
