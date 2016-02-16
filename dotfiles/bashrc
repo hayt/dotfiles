@@ -1,3 +1,5 @@
+#get some environment variables
+
 _isxrunning=false
 [[ -n "$DISPLAY" ]] && _isxrunning=true
 
@@ -7,6 +9,7 @@ _isroot=false
 _islinux=false
 [[ "$(uname -s)" =~ Linux|GNU|GNU/* ]] && _islinux=true
 
+#TODO:  make subfolder for win and lin and just call every file in it (no hardcoding anymore)
 if $_islinux; then
 	if [[ -f $HOME/dotfiles/bash/bashrc_linux.sh ]];then
 		.  $HOME/dotfiles/bash/bashrc_linux.sh
