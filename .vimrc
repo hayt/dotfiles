@@ -26,3 +26,6 @@ set noswapfile
 "i dont wanna use esc 
 inoremap jj <Esc>
 inoremap <C-ü> <Esc>
+
+"no automatic comment when pressing enter in comment 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
