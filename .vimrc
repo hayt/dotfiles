@@ -23,9 +23,34 @@ set incsearch     " show search matches as you type
 set nobackup
 set noswapfile
 
-"i dont wanna use esc 
+"i dont wanna use esc
 inoremap jj <Esc>
 inoremap <C-ü> <Esc>
 
-"no automatic comment when pressing enter in comment 
+"no automatic comment when pressing enter in comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+set relativenumber "line number realitves to current line
+set undofile		" create a undo file
+set gdefault "s/... add a g default at end
+
+"some search optimizations
+set incsearch
+set showmatch
+set hlsearch
+
+"up down etc does not work in normal mode... training purposes
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+"\w strips trailing white spaces
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+"open this file in another window
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+"ctrl + hjkl makes split window navigation easy
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
