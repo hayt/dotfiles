@@ -5,6 +5,8 @@ filetype plugin indent on    " required
 
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
+set expandtab	  "tabs are spaces
+
 set backspace=indent,eol,start
                     " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
@@ -27,6 +29,10 @@ set noswapfile
 inoremap jj <Esc>
 inoremap <C-ü> <Esc>
 
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
 "no automatic comment when pressing enter in comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -44,6 +50,8 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
+let mapleader=","       " leader is comma
 "\w strips trailing white spaces
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 "open this file in another window
@@ -54,3 +62,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+set wildmenu
+set lazyredraw
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+nnoremap <space> za
