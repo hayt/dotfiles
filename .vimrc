@@ -41,7 +41,7 @@ nnoremap k gk
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set relativenumber "line number realitves to current line
-set undofile		" create a undo file
+set undofile        " create a undo file
 set gdefault "s/... add a g default at end
 
 "some search optimizations
@@ -75,3 +75,6 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
+
+set listchars=tab:>~,nbsp:_,trail:.
+set list
