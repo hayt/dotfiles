@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'jreybert/vimagit'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
