@@ -87,4 +87,9 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-
+"fugitive browsing windows dont keep themself open in the background
+autocmd BufReadPost fugitive://* set bufhidden=delete
+"show git branch in statusline
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+"make statusline always shown
+set laststatus=2
