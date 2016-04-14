@@ -83,8 +83,8 @@ set list
 syntax enable
 set background=dark
 colorscheme solarized
-if has('gui_running')
-    set t_Co=16
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
 endif
 
 
