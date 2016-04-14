@@ -6,6 +6,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -78,3 +79,7 @@ nnoremap <space> za
 
 set listchars=tab:>~,nbsp:_,trail:.
 set list
+
+syntax enable
+set background=dark
+colorscheme solarized
