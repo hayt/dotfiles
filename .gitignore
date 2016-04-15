@@ -3,3 +3,4 @@
 !dotfiles/*
 !.gitignore
 !.vimrc
+!.gitconfig
