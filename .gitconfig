@@ -1,0 +1,42 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = rgr
+	email = rgr@qosmotec.com
+[core]
+	autocrlf = true
+	filemode = true
+	editor = vim
+[push]
+	default = matching
+[mergetool "kdiff3"]
+	cmd = \"C:\\\\Program Files\\\\KDiff3\\\\kdiff3\" $BASE $LOCAL $REMOTE -o $MERGED
+[github]
+	user = rgr
+[color]
+	ui = true
+	status = auto
+	branch = auto
+	diff = auto
+[diff]
+	color = true
+	tool = meld
+[format]
+	signoff = true
+[alias]
+	reset = reset --soft HEAD^
+	graph = log --graph --oneline --decorate
+	compare = difftool --dir-diff HEAD^ HEAD
+	tree = log --pretty=oneline --graph --decorate --all
+	ma = checkout master
+	cl = checkout -
+	st= status
+[gui]
+	recentrepo = C:/Accurev/alpha
+	recentrepo = F:/qts
+[rerere]
+	enabled = true
+[mergetool "meld"]
+	path = C:\\Program Files (x86)\\Meld\\Meld.exe
