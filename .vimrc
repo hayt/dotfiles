@@ -5,8 +5,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive' "git integration
+Plugin 'altercation/vim-colors-solarized' "solarized color theme
+Plugin 'scrooloose/nerdtree' 
+Plugin 'kien/ctrlp.vim' "fuzzy finding files
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -93,3 +95,12 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "make statusline always shown
 set laststatus=2
+if has('mouse')
+    set mouse=a
+endif
+
+"git status and bigger
+nmap <leader>gs :Gstatus<CR><C-w>20+ 
+
+"nerd tree open
+map <C-n> :NERDTreeToggle<CR>
