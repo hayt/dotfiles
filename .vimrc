@@ -3,8 +3,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-fugitive' "git integration
 Plugin 'altercation/vim-colors-solarized' "solarized color theme
 Plugin 'scrooloose/nerdtree' 

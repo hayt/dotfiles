@@ -1,6 +1,2 @@
-*
-!.bashrc
-!dotfiles/*
-!.gitignore
-!.vimrc
-!.gitconfig
+*.un~
+.vim/bundle*
