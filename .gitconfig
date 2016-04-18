@@ -20,6 +20,7 @@
 	diff = auto
 [diff]
 	color = true
+	tool = vimdiff
 [format]
 	signoff = true
 [alias]
@@ -35,3 +36,5 @@
 	recentrepo = F:/qts
 [rerere]
 	enabled = true
+[merge]
+	tool = vimdiff
