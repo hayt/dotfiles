@@ -7,7 +7,7 @@ _isroot=false
 [[ $UID -eq 0 ]] && _isroot=true
 
 _islinux=false
-[[ "$(uname -s)" =~ Linux|GNU|GNU/* ]] && _islinux=true
+[[ "$(uname -s)" =~ Linux|GNU|GNU/*|CYGWIN/* ]] && _islinux=true
 
 #TODO:  make subfolder for win and lin and just call every file in it (no hardcoding anymore)
 if $_islinux; then
