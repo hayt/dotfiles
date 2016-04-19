@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ~/dotfiles/mkSymlinks.sh
 mkdir ~/.scheme
