@@ -18,12 +18,12 @@ else
 	if [[ -f  $HOME/dotfiles/bash/bashrc_windows.sh ]]; then
 		.  $HOME/dotfiles/bash/bashrc_windows.sh
 	fi
+    if [[ -f $HOME/.scheme/color.theme ]]; then
+        . $HOME/.scheme/color.theme
+    fi
 fi
 
 if [[ -f $HOME/dotfiles/bash/git.sh ]]; then
 	. $HOME/dotfiles/bash/git.sh
 fi
 
-if [[ -f $HOME/.scheme/color.theme ]]; then
-    . $HOME/.scheme/color.theme
-fi
