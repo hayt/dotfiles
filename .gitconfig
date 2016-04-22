@@ -6,7 +6,6 @@
 	name = rgr
 	email = rgr@qosmotec.com
 [core]
-	autocrlf = true
 	filemode = true
 	editor = vim
 [push]
@@ -21,6 +20,7 @@
 [diff]
 	color = true
 	tool = vimdiff
+	mnemonicprefix = true
 [format]
 	signoff = true
 [alias]
@@ -34,7 +34,5 @@
 [gui]
 	recentrepo = C:/Accurev/alpha
 	recentrepo = F:/qts
-[rerere]
-	enabled = true
 [merge]
 	tool = vimdiff
