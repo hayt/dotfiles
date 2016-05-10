@@ -9,7 +9,7 @@
 	filemode = true
 	editor = vim
 [push]
-	default = matching
+	default = tracking
 [github]
 	user = rgr
 [color]

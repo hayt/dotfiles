@@ -65,6 +65,8 @@ let mapleader=","       " leader is comma
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 "open this file in another window
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+"add changelog date/time
+nnoremap <leader>cl :r !date --rfc-2822<cr>
 
 "ctrl + hjkl makes split window navigation easy
 "nnoremap <C-h> <C-w>h
@@ -100,9 +102,9 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "make statusline always shown
 set laststatus=2
-if has('mouse')
-    set mouse=a
-endif
+"if has('mouse')
+"    set mouse=a
+"endif
 
 "git status and bigger
 nmap <leader>gs :Gstatus<CR><C-w>20+ 
