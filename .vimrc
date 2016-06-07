@@ -36,6 +36,7 @@ set noswapfile
 
 "i dont wanna use esc
 inoremap jj <Esc>
+inoremap kk <Esc>
 inoremap <C-ü> <Esc>
 
 " move vertically by visual line
