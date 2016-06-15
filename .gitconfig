@@ -30,7 +30,7 @@
 	tree = log --pretty=oneline --graph --decorate --all
 	ma = checkout master
 	cl = checkout -
-	st= status
+	st= status -s
 [gui]
 	recentrepo = C:/Accurev/alpha
 	recentrepo = F:/qts

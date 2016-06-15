@@ -113,6 +113,15 @@ nmap <leader>gs :Gstatus<CR><C-w>20+
 "nerd tree open
 map <C-n> :NERDTreeToggle<CR>
 
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
+
 "Section Functions {{{
 
 " Window movement shortcuts
