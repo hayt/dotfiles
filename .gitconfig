@@ -30,9 +30,10 @@
 	tree = log --pretty=oneline --graph --decorate --all
 	ma = checkout master
 	cl = checkout -
-	st= status -s
+	st= status -sb
 [gui]
 	recentrepo = C:/Accurev/alpha
 	recentrepo = F:/qts
 [merge]
 	tool = vimdiff
+    renamelimit=10000
