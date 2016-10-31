@@ -12,6 +12,9 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'kien/ctrlp.vim' "fuzzy finding files
 Plugin 'kshenoy/vim-signature' "showing dem marks
 Plugin 'altercation/vim-colors-solarized' "showing dem marks
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mbbill/undotree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " }}}
@@ -86,6 +89,10 @@ set listchars=tab:>~,nbsp:_,trail:¬
 set list
 
 set hidden "allow hidden buffers
+
+"vim-airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "show git branch in statusline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
