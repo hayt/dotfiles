@@ -15,6 +15,7 @@ Plugin 'altercation/vim-colors-solarized' "showing dem marks
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mbbill/undotree'
+Plugin 'justinmk/vim-sneak'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " }}}
@@ -30,7 +31,7 @@ set ttimeoutlen=10
 let g:netrw_bufsettings = 'noma nomod rnu nobl nowrap ro'
 
 syntax enable
-set background=dark
+set background=light
 let g:solarized_italic=0
 colorscheme solarized
 
@@ -56,6 +57,8 @@ set incsearch     " show search matches as you type
 set nobackup
 set noswapfile
 
+set scrolloff=5   " leave 5 lines offset when scrolling
+
 set relativenumber "line number realitves to current line
 
 " Put plugins and dictionaries in this dir (also on Windows)
@@ -72,6 +75,8 @@ if has('persistent_undo')
     set undofile
 endif
 
+"ctrlp starts in buffer mode
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 set gdefault "s/... add a g default at end
 
@@ -113,6 +118,9 @@ let $LANG = 'en_US'
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
+" Add ignorance of whitespace to diff
+set diffopt+=iwhite
+
 " }}}
 
 "mappings {{{
@@ -123,7 +131,7 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
-let mapleader=","       " leader is comma
+let mapleader="\<Space>"
 "see all modified buffers
 nnoremap <leader>w :ls+<cr>
 "open this file in another window
@@ -145,12 +153,11 @@ nnoremap <C-l> <C-w>l
 "map <silent> <C-j> :call WinMove('j')<cr>
 "map <silent> <C-k> :call WinMove('k')<cr>
 "map <silent> <C-l> :call WinMove('l')<cr>
-nnoremap <space> za
+
 
 "i dont wanna use esc
 inoremap jj <Esc>
 inoremap kk <Esc>
-inoremap <C-Ã¼> <Esc>
 
 " move vertically by visual line
 nnoremap j gj
@@ -163,6 +170,11 @@ nmap <leader>gs :Gstatus<CR><C-w>20+
 
 " enter in normal inserts new line (better than o + esc)
 nnoremap <cr> o<esc>
+
+"make ctrl+R + / paste the searched string without the \< and \> arround it
+inoremap <c-r>/ <c-r>=substitute(@/, '\v^\\\<(.+)\\\>$', '\1', '')<cr>
+
+nnoremap <leader>l :ls<CR>:b<space>
 
 " }}}
 
@@ -193,7 +205,7 @@ augroup END
 
 " }}}
 
-"Section Functions {{{
+"Functions {{{
 
 " Window movement shortcuts
 " move to the window in the direction shown, or create a new window
